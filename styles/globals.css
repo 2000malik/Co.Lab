@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: sans-serif, Arial, Helvetica;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
