@@ -57,7 +57,13 @@ export const HeroSection = () => {
         />
       </Box>
       {/* show on small device screen only */}
-      <Button leftIcon={<Email />} my='2' display={{ base: 'flex', md: 'none' }} alignSelf='center'>
+      <Button
+        leftIcon={<Email />}
+        mt='50px'
+        w='200px'
+        display={{ base: 'flex', md: 'none' }}
+        alignSelf='center'
+      >
         <a href='mailto:kojomalik2000@gmail.com'>Email</a>
       </Button>
       {/* show on small device screen only */}
