@@ -11,6 +11,7 @@ import { Footer } from '@/components/Footer';
 import { Button } from '@/components/Button';
 import { Hamburger } from '@/components/Icons/Hamburger';
 import { ApiCall } from '@/components/ApiCall';
+import { Cancel } from '@/components/Icons/Cancel';
 
 export default function Home() {
   const [showMobileMenu, setShowMobileMenu] = useState<boolean>(false);
@@ -34,7 +35,7 @@ export default function Home() {
                   display={{ base: 'unset', md: 'none' }}
                   handleOnClick={() => setShowMobileMenu(!showMobileMenu)}
                 >
-                  <Hamburger />
+                  {!showMobileMenu ? <Hamburger /> : <Cancel />}
                 </Button>
               </Flex>
               {showMobileMenu && (
