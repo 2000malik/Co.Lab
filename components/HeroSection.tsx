@@ -26,7 +26,7 @@ export const HeroSection = () => {
           the web applications during the development process.
         </Text>
         <Text>Here are a few technologies{" I've"} been working with recently:</Text>
-        <UnorderedList mb={{ base: 3 }}>
+        <UnorderedList mb={{ base: '30px' }}>
           <ListItem>Figma</ListItem>
           <ListItem>Chakra UI</ListItem>
           <ListItem>React JS</ListItem>
