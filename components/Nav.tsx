@@ -3,7 +3,7 @@ import { List, ListItem } from '@chakra-ui/react';
 export const Nav = ({ ...props }) => {
   const navItems = [
     { id: 'about', label: 'About' },
-    { id: 'portfolio', label: 'portfolio' },
+    { id: 'projects', label: 'projects' },
     { id: 'contact', label: 'contact' },
   ];
   return (

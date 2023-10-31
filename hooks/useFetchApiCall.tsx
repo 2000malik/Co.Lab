@@ -1,4 +1,4 @@
-import { baseUrl } from '@/helpers/constants';
+// import { baseUrl } from '@/helpers/constants';
 import { ErrorHandler } from '@/types/Errors';
 import { UserData } from '@/types/users';
 import axios from 'axios';
@@ -8,6 +8,7 @@ type ResponseData = {
   data: UserData[];
 };
 export const useFetchUserInfo = () => {
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
   const [userInfo, setUserInfo] = useState<UserData[]>([]);
   const [error, setError] = useState<string>('');
   useEffect(() => {

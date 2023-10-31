@@ -54,8 +54,8 @@ export default function Home() {
             <HeroSection />
           </PageLayout>
         </Box>
-        <Box bg='lightBackground' id='portfolio' py={5}>
-          <PageLayout>
+        <Box bg='lightBackground' id='projects' py={5} >
+          <PageLayout sx={{ margin:"4rem 0 " }}>
             <PortfolioSection />
           </PageLayout>
         </Box>

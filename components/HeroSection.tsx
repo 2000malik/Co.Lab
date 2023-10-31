@@ -21,7 +21,7 @@ export const HeroSection = () => {
         </Box>
         <Text lineHeight='taller' fontSize='xl' color='heading' my='10'>
           A front-end engineer and freelancer from Lagos, Nigeria. I have been a front-end engineer
-          for over two years. Developing web application solutions for enterprises and businesses
+          for over three years. Developing web application solutions for enterprises and businesses
           that align with their digital vision, and most importantly, considering the end users of
           the web applications during the development process.
         </Text>
