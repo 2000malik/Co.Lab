@@ -11,6 +11,7 @@ import { Footer } from '@/components/Footer';
 import { Button } from '@/components/Button';
 import { Hamburger } from '@/components/Icons/Hamburger';
 import { ApiCall } from '@/components/ApiCall';
+import { Cancel } from '@/components/Icons/Cancel';
 
 export default function Home() {
   const [showMobileMenu, setShowMobileMenu] = useState<boolean>(false);
@@ -34,12 +35,18 @@ export default function Home() {
                   display={{ base: 'unset', md: 'none' }}
                   handleOnClick={() => setShowMobileMenu(!showMobileMenu)}
                 >
-                  <Hamburger />
+                  {!showMobileMenu ? <Hamburger /> : <Cancel />}
                 </Button>
               </Flex>
               {showMobileMenu && (
                 <Flex display={{ base: 'unset', md: 'none' }}>
-                  <Nav flexDirection='column' color='white' overflowY='auto' p='3' />
+                  <Nav
+                    flexDirection='column'
+                    color='white'
+                    overflowY='auto'
+                    p='3'
+                    transition=' width 2s,height 4s, transform 1s'
+                  />
                 </Flex>
               )}
               {/* Mobile menu ends */}
@@ -53,17 +60,17 @@ export default function Home() {
             <HeroSection />
           </PageLayout>
         </Box>
-        <Box bg='lightBackground' id='portfolio' py={5}>
-          <PageLayout>
+        <Box bg='lightBackground' id='projects' py={5}>
+          <PageLayout sx={{ margin: '4rem 0 ' }}>
             <PortfolioSection />
           </PageLayout>
         </Box>
-        <Box id='api' py={5}>
+        {/* <Box id='api' py={5}>
           <PageLayout>
             <ApiCall />
           </PageLayout>
-        </Box>
-        <Box bg='BI' id='contact'>
+        </Box> */}
+        <Box id='contact'>
           <PageLayout>
             <Footer />
           </PageLayout>
