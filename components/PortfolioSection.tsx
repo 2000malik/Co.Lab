@@ -54,14 +54,6 @@ const PortfolioCard = ({ logo, name, link, industry, solution }: PortfolioCardPr
           borderRadius='1'
           h='300px'
           mb='5'
-          _hover={
-            {
-              // transition: 'transform .2s',
-              // transform: 'scale(0.9)',
-              // border: '1px solid',
-              // borderColor: 'footerBackground',
-            }
-          }
         ></Box>
         <Link as={NextLink} href={link} isExternal _hover={{ textDecoration: 'none' }}>
           <Text textAlign='center' mb='3' color='subHeader' fontSize='sm' fontWeight='bold'>
@@ -69,52 +61,6 @@ const PortfolioCard = ({ logo, name, link, industry, solution }: PortfolioCardPr
           </Text>
         </Link>
       </Box>
-
-      {/* <Card
-        borderRadius='1'
-        h='300px'
-        w={{ base: 'full', md: '49.4%' }}
-        mb='5'
-        _hover={{
-          // transition: 'transform .2s',
-          // transform: 'scale(0.9)',
-          borderColor: 'footerBackground',
-        }}
-      >
-        <CardBody display='flex'>
-          <Avatar
-            color='white'
-            name={name}
-            src={logo}
-            size={{ base: 'lg', md: 'xl' }}
-            boxShadow='2xl'
-          />
-          <Box
-            minW={{ base: '100px', md: '200px' }}
-            ml={{ base: '20px', md: '40px' }}
-            fontSize='sm'
-            fontWeight='bold'
-            color='subHeader'
-          >
-            <UnorderedList>
-              <ListItem aria-label={"company's name"}>
-                <Text> {name}</Text>
-              </ListItem>
-              <ListItem aria-label={'link to project'}>
-                <Link as={NextLink} href={link} isExternal>
-                  {link}
-                </Link>
-              </ListItem>
-              <ListItem aria-label={"company's industry"}>
-                <Text> {industry}</Text>
-              </ListItem>
-              <ListItem aria-label={"company's solutions and services"}>
-                <Text> {solution}</Text>
-              </ListItem>
-            </UnorderedList>
-          </Box>
-        </CardBody>
-      </Card> */}
     </Fragment>
   );
 };
