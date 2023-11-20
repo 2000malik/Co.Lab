@@ -40,7 +40,13 @@ export default function Home() {
               </Flex>
               {showMobileMenu && (
                 <Flex display={{ base: 'unset', md: 'none' }}>
-                  <Nav flexDirection='column' color='white' overflowY='auto' p='3' />
+                  <Nav
+                    flexDirection='column'
+                    color='white'
+                    overflowY='auto'
+                    p='3'
+                    transition=' width 2s,height 4s, transform 1s'
+                  />
                 </Flex>
               )}
               {/* Mobile menu ends */}
@@ -54,17 +60,17 @@ export default function Home() {
             <HeroSection />
           </PageLayout>
         </Box>
-        <Box bg='lightBackground' id='projects' py={5} >
-          <PageLayout sx={{ margin:"4rem 0 " }}>
+        <Box bg='lightBackground' id='projects' py={5}>
+          <PageLayout sx={{ margin: '4rem 0 ' }}>
             <PortfolioSection />
           </PageLayout>
         </Box>
-        <Box id='api' py={5}>
+        {/* <Box id='api' py={5}>
           <PageLayout>
             <ApiCall />
           </PageLayout>
-        </Box>
-        <Box bg='BI' id='contact'>
+        </Box> */}
+        <Box id='contact'>
           <PageLayout>
             <Footer />
           </PageLayout>
