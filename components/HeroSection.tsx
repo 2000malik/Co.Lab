@@ -3,6 +3,20 @@ import { Button } from './Button';
 import { Email } from './Icons/Email';
 
 export const HeroSection = () => {
+  const stacks = [
+    'HTML',
+    'CSS',
+    'JAVASCRIPT',
+    'TYPESCRIPT',
+    'FIGMA',
+    'CHAKRA UI',
+    'BOOTSTRAP',
+    'REACT.JS',
+    'NEXT.JS',
+    'JIRA ( Project Management tool )',
+    'GIT',
+    'Graph Ql',
+  ];
   return (
     <Flex direction={{ base: 'column', md: 'row' }} justifyContent='space-between'>
       <Box w={{ lg: '50%' }}>
@@ -21,7 +35,7 @@ export const HeroSection = () => {
         </Box>
         <Text lineHeight='taller' fontSize='xl' color='heading' my='10'>
           A front-end engineer and freelancer from Lagos, Nigeria. I have been a front-end engineer
-          for over two years. Developing web application solutions for enterprises and businesses
+          for over three years. Developing web application solutions for enterprises and businesses
           that align with their digital vision, and most importantly, considering the end users of
           the web applications during the development process.
         </Text>
@@ -29,11 +43,9 @@ export const HeroSection = () => {
           Here are a few technologies{" I've"} been working with recently:
         </Text>
         <UnorderedList mb={{ base: '30px' }}>
-          <ListItem>Figma</ListItem>
-          <ListItem>Chakra UI</ListItem>
-          <ListItem>React JS</ListItem>
-          <ListItem>Next JS</ListItem>
-          <ListItem>Jira ( Project Management tool )</ListItem>
+          {stacks.map((stack) => (
+            <ListItem key={stack}> {stack}</ListItem>
+          ))}
         </UnorderedList>
         {/* show on medium screen upwards */}
         <Button

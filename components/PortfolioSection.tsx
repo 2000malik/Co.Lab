@@ -17,7 +17,7 @@ import { Link } from '@chakra-ui/react';
 export const PortfolioSection = () => {
   return (
     <Fragment>
-      <Heading mb='20px' textAlign='center'>
+      <Heading mb='50px' textAlign='center'>
         Some of the projects I have worked on{' '}
       </Heading>
       <Flex flexWrap='wrap' justifyContent='space-between'>
@@ -44,42 +44,23 @@ type PortfolioCardProps = {
 };
 const PortfolioCard = ({ logo, name, link, industry, solution }: PortfolioCardProps) => {
   return (
-    <Card
-      w={{ base: 'full', md: '49.4%' }}
-      mb='5'
-      _hover={{
-        transition: 'transform .2s',
-        transform: 'scale(0.9)',
-        borderColor: 'footerBackground',
-      }}
-    >
-      <CardBody display='flex'>
-        <Avatar name={name} src={logo} size={{ base: 'lg', md: 'xl' }} boxShadow='2xl' />
+    <Fragment>
+      <Box w={{ base: 'full', md: '49.4%' }}>
         <Box
-          minW={{ base: '100px', md: '200px' }}
-          ml={{ base: '20px', md: '40px' }}
-          fontSize='sm'
-          fontWeight='bold'
-          color='subHeader'
-        >
-          <UnorderedList>
-            <ListItem aria-label={"company's name"}>
-              <Text> {name}</Text>
-            </ListItem>
-            <ListItem aria-label={'link to project'}>
-              <Link as={NextLink} href={link} isExternal>
-                {link}
-              </Link>
-            </ListItem>
-            <ListItem aria-label={"company's industry"}>
-              <Text> {industry}</Text>
-            </ListItem>
-            <ListItem aria-label={"company's solutions and services"}>
-              <Text> {solution}</Text>
-            </ListItem>
-          </UnorderedList>
-        </Box>
-      </CardBody>
-    </Card>
+          bgImage={logo}
+          bgRepeat='no-repeat'
+          bgSize='clamp(300px, 100vh, 600px)'
+          bgPosition='center'
+          borderRadius='1'
+          h='300px'
+          mb='5'
+        ></Box>
+        <Link as={NextLink} href={link} isExternal _hover={{ textDecoration: 'none' }}>
+          <Text textAlign='center' mb='3' color='subHeader' fontSize='sm' fontWeight='bold'>
+            {link}{' '}
+          </Text>
+        </Link>
+      </Box>
+    </Fragment>
   );
 };
