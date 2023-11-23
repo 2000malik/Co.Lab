@@ -1,16 +1,6 @@
 import { project } from '@/helpers/constants';
-import {
-  Avatar,
-  Box,
-  CardBody,
-  Flex,
-  Heading,
-  ListItem,
-  Text,
-  UnorderedList,
-} from '@chakra-ui/react';
+import { Box, Flex, Heading, Text } from '@chakra-ui/react';
 import { Fragment } from 'react';
-import { Card } from './Card';
 import NextLink from 'next/link';
 import { Link } from '@chakra-ui/react';
 
@@ -45,7 +35,7 @@ type PortfolioCardProps = {
 const PortfolioCard = ({ logo, name, link, industry, solution }: PortfolioCardProps) => {
   return (
     <Fragment>
-      <Box w={{ base: 'full', md: '49.4%' }}>
+      <Box w={{ base: 'full', md: '49.4%' }} borderRadius='5%' mb='3' p='5' background='#fff'>
         <Box
           bgImage={logo}
           bgRepeat='no-repeat'
@@ -56,7 +46,7 @@ const PortfolioCard = ({ logo, name, link, industry, solution }: PortfolioCardPr
           mb='5'
         ></Box>
         <Link as={NextLink} href={link} isExternal _hover={{ textDecoration: 'none' }}>
-          <Text textAlign='center' mb='3' color='subHeader' fontSize='sm' fontWeight='bold'>
+          <Text textAlign='center' mb='3' color='subHeader' fontSize='xs' fontWeight='bold'>
             {link}{' '}
           </Text>
         </Link>
