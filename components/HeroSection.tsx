@@ -53,6 +53,7 @@ export const HeroSection = () => {
           justifyContent='center'
           leftIcon={<Email />}
           mt={5}
+          background='footerBackground'
           display={{ base: 'none', md: 'flex' }}
         >
           <a href='mailto:kojomalik2000@gmail.com'>Email</a>
@@ -75,6 +76,7 @@ export const HeroSection = () => {
         w='200px'
         display={{ base: 'flex', md: 'none' }}
         alignSelf='center'
+        background='footerBackground'
       >
         <a href='mailto:kojomalik2000@gmail.com'>Email</a>
       </Button>

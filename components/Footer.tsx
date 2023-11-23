@@ -14,7 +14,7 @@ export const Footer = () => {
         </Heading>
         <Text textAlign='center'>
           {
-            " I'm currently open to opportunities, if you want to get in touch, fill up the form below or send an email and let's talk"
+            "I'm currently open to opportunities if you'd like to get in touch, send an email, and let's talk."
           }
         </Text>
         <Box display='flex' alignItems='center' justifyContent='center'>
@@ -27,7 +27,7 @@ export const Footer = () => {
           w={{ base: 'full', md: '30%', lg: '12%' }}
           justifyContent='space-evenly'
         >
-          <a href='linkedin.com/in/malik-ojo-4b8107168' target='_blank'>
+          <a href='https://www.linkedin.com/in/malik-ojo-4b8107168/' target='_blank'>
             <LinkedIn fill='#ffa029' width='20px' height='20px' />
           </a>
 
